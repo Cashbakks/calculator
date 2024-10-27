@@ -19,75 +19,67 @@
         <div class="row">
             <div class="col col-sm-12">
                 <h1 class="text-center">Dowry calculator</h1>
-                <form>
-                    <label for="education_level">Education level:</label><br>
-                    <select id="education">
-                        <option value="blank"></option>
-                        <option value="bachelor">Bachelor's degree</option>
-                        <option value="college">College degree</option>
-                        <option value="high_school">High school degree</option>
-                        <option value="middle_school">Middle school degree</option>
-                    </select>
-                    <hr>
-                    <label for="family_networth">Family networth</label><br>
-                    <select id="networth">
-                        <option value="blank"></option>
-                        <option value="upper_class">More than 100,000$</option>
-                        <option value="middle_class">Between 50,000$ and 100,000$</option>
-                        <option value="lower_class">Less than 50,000$</option>
-                    </select>
-                    <hr>
-                    <!-- CONTINUE YOUR ASSIGNMENT HERE!!! -->
-          
-                    <label for="Caste">Caste</label><br>
-                    <select id="Caste">
-                        <option value="blank"></option>
-                        <option value="upper_class">Brahmin</option>
-                        <option value="middle_class">Kshatriya </option>
-                        <option value="middle_class"> Vaishya</option>
-                        <option value="middle_class">Shudra</option>
-                        <option value="lower_class">Varna - untouchable</option>
-                    </select>
-                    <hr>
-                    <label>Groom's skills </label><br>
+                  <!-- Name Input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br><br>
 
-<input type="checkbox" id="playing_instrument" name="instrument" value="attitude">
-<label for="playing_instrument">Playing on a musical instrument</label><br>
-<input type="checkbox" id="good_cook" name="cook" value="character">
-<label for="good_cook">Good cook</label><br>
-<input type="checkbox" id="Easygoing_character" name="character" value="general_gossips">
-<label for="Easygoing_character">Easygoing character</label><br>
-<input type="checkbox" id="sings_well" name="sing" value="general_gossips">
-<label for="sings_well">Sings well</label><br>
+        <!-- Starting Bid -->
+        <label for="startingBid">Starting Bid:</label>
+        <input type="number" id="startingBid" value="100"><br><br>
 
-                    </select>
-                    <hr>
-                    <label>Groom's age</label><br>
+        <!-- Education Dropdown -->
+        <label for="education">Education Level:</label>
+        <select id="education">
+            <option value="1.5">Undergraduate Degree</option>
+            <option value="1.2">College Degree</option>
+            <option value="1.05">High School Degree</option>
+            <option value="0.9">Middle School Degree</option>
+        </select><br><br>
 
-                    <input type="radio" id="youngest" name="age" value="attitude">
-                    <label for="youngest">Between 18-23</label><br>
-                    <input type="radio" id="Between" name="age" value="character">
-                    <label for="Between">Between 24-27</label><br>
-                    <input type="radio" id="oldest" name="age" value="general_gossips">
-                    <label for="oldest">28+</label><br>
-                      </select>
-                      <hr>
+        <!-- Family Net Worth Dropdown -->
+        <label for="networth">Family Net Worth:</label>
+        <select id="networth">
+            <option value="2">More than $10,000</option>
+            <option value="1.5">Between $5,000 and $10,000</option>
+            <option value="1.2">Less than $5,000</option>
+        </select><br><br>
 
-                      <label>Groom's reputation:</label><br>
+        <!-- Caste Dropdown -->
+        <label for="caste">Caste:</label>
+        <select id="caste">
+            <option value="100">Brahmin</option>
+            <option value="50">Kshatriya</option>
+            <option value="20">Vaishya</option>
+            <option value="10">Shudra</option>
+            <option value="-50">Varna</option>
+        </select><br><br>
 
-                      <input type="checkbox" id="gossip_parents" name="reputation" value="attitude">
-                      <label for="gossip_parents">Gossips about his parent's attitude</label><br>
-                      
-                      <input type="checkbox" id="gossip_character" name="reputation" value="character">
-                      <label for="gossip_character">Gossips about his character</label><br>
-                      
-                      <input type="checkbox" id="general_gossips" name="reputation" value="general_gossips">
-                      <label for="general_gossips">General gossips around his person</label><br>
-                      
-                      <hr>
-                      
+        <!-- Skills Checkboxes -->
+        <label>Skills:</label><br>
+        <input type="checkbox" id="playing_instrument"> Playing a musical instrument (+10)<br>
+        <input type="checkbox" id="good_cook"> Good cook (+20)<br>
+        <input type="checkbox" id="easygoing_character"> Easygoing character (+15)<br>
+        <input type="checkbox" id="sings_well"> Sings well (+10)<br><br>
 
-                </form>
+        <!-- Age Radio Buttons -->
+        <label>Age:</label><br>
+        <input type="radio" name="age" id="youngest" value="1.5"> Between 18-23<br>
+        <input type="radio" name="age" id="between" value="1.2"> Between 24-27<br>
+        <input type="radio" name="age" id="oldest" value="0.95"> 28+<br><br>
+
+        <!-- Reputation Checkboxes -->
+        <label>Reputation:</label><br>
+        <input type="checkbox" id="gossip_parents"> Gossips about parent's attitude (0.85)<br>
+        <input type="checkbox" id="gossip_character"> Gossips about character (0.9)<br>
+        <input type="checkbox" id="general_gossips"> General gossips around (reduces 20)<br><br>
+
+        <!-- Love Letter Text Area -->
+        <label for="loveLetter">Love Letter:</label><br>
+        <textarea id="loveLetter" maxlength="500"></textarea><br><br>
+
+        <!-- Submit Button -->
+        <button type="button" id="submit">Calculate Price</button>
+    </form>
                 <button id="submit" type="button" class="btn btn-primary">Calculate price</button>
 
                 <div class="js-final-price">Final price:</div>
